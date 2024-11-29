@@ -5,8 +5,8 @@ This project involves querying emails from Elasticsearch (ES), processing them t
 
 # Process Flow
 1.	Query Emails from Elasticsearch (ES)
-    i) Connects to Elasticsearch using specified host, username, and password
-  	ii) Queries for emails of type EML with the High Priority tag and missing MD5 in files_attached.
+  • Connects to Elasticsearch using specified host, username, and password.__
+  • Queries for emails of type EML with the High Priority tag and missing MD5 in files_attached.__
 3.	Preprocess and Chunk Emails
   •	Retrieves emails from ES.
   •	Preprocesses email content by removing extra newlines and replacing carriage returns.
