@@ -1,0 +1,7 @@
+tqdm==4.67.0
+python-dotenv==1.0.0
+elasticsearch==8.9.0
+elasticsearch-dsl==8.8.0
+sentence-transformers==2.2.2
+langchain==0.107.0
+ollama==0.0.3
