@@ -28,13 +28,13 @@ This project involves querying emails from Elasticsearch (ES), processing them t
   •	Updates the email’s tags in Elasticsearch based on the Llama response using a batch update process.
 
 # File Descriptions
-  •	high_priority_mails_2024.pkl: A pickle file that stores the queried email list for reusability.
+  •	high_priority_mails_2024.pkl: A pickle file that stores the queried email list for reusability.<br />
   •	jsons/high_priority_mails.json: A JSON file that stores the Llama-generated email responses for ES updates.
 
 # Execute the Script to:
-  •	Query Elasticsearch for relevant emails.
-  •	Preprocess, chunk, and generate embeddings.
-  •	User gives prompt for queries and fetch relevant results.
+  •	Query Elasticsearch for relevant emails.<br />
+  •	Preprocess, chunk, and generate embeddings.<br />
+  •	User gives prompt for queries and fetch relevant results.<br />
   •	Send the selected email for Llama analysis and update Elasticsearch.
   
 # Updating Elasticsearch:
