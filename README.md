@@ -5,25 +5,25 @@ This project involves querying emails from Elasticsearch (ES), processing them t
 
 # Process Flow
 1.	Query Emails from Elasticsearch (ES)
-  •	Connects to Elasticsearch using specified host, username, and password.
-  •	Queries for emails of type EML with the High Priority tag and missing MD5 in files_attached.
-2.	Preprocess and Chunk Emails
+    i) Connects to Elasticsearch using specified host, username, and password
+  	ii) Queries for emails of type EML with the High Priority tag and missing MD5 in files_attached.
+3.	Preprocess and Chunk Emails
   •	Retrieves emails from ES.
   •	Preprocesses email content by removing extra newlines and replacing carriage returns.
   •	Splits the email content into chunks using the TokenTextSplitter from LangChain to ensure context preservation across chunks.
-3.	Generate Embeddings
+4.	Generate Embeddings
   •	Utilizes Stella SentenceTransformer to generate embeddings for each chunk of email content.
   •	Stores the embeddings in a list for further processing.
-4.	User Query and Similarity Search
+5.	User Query and Similarity Search
   •	Accepts a user-defined query related to high-priority emails.
   •	Generates embeddings for the query and compares it with email embeddings using a similarity search.
   •	Sorts and displays the top 5 most relevant emails based on similarity scores.
-5.	Email Analysis with Llama
+6.	Email Analysis with Llama
   •	Prompts the user to select one of the top 5 emails for further analysis.
   •	Extracts claim numbers from the email content using a regex pattern.
   •	Sends the email content and claim numbers to Llama using the LlamaChatHandler class.
   •	The Llama model uses prompt engineering and few-shot learning to generate a JSON-formatted response.
-6.	Save and Update Tags in Elasticsearch
+7.	Save and Update Tags in Elasticsearch
   •	Saves the Llama response in a JSON file.
   •	Updates the email’s tags in Elasticsearch based on the Llama response using a batch update process.
 
