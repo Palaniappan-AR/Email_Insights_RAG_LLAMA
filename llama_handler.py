@@ -76,7 +76,7 @@ class LlamaChatHandler:
         ]
         
         try:
-          response = ollama.chat(model = self.model, messages = messages, format = "json", stream = False, options={"temperature":0.2})
+          response = ollama.chat(model = self.model, messages = messages, format = "json", stream = False, options={"temperature":self.temperature})
         except Exception as e:
             return f"Error occured : {str(e)}"
         return response['message']['content']
